@@ -3,8 +3,16 @@ return {
   { import = "lazyvim.plugins.extras.formatting.prettier" },
   { import = "lazyvim.plugins.extras.linting.eslint" },
 
-  { import = "lazyvim.plugins.extras.lang.java" },
+  -- { import = "lazyvim.plugins.extras.lang.java" },
   { import = "lazyvim.plugins.extras.dap.core" },
+
+  {
+    "nvim-java/nvim-java",
+    config = function()
+      require("java").setup()
+      vim.lsp.enable("jdtls")
+    end,
+  },
 
   {
     "mason-org/mason.nvim",
@@ -17,7 +25,7 @@ return {
         "eslint-lsp",
         "js-debug-adapter",
         -- Java
-        "jdtls",
+        -- "jdtls",
         "google-java-format",
         "checkstyle",
         "lemminx",
@@ -74,7 +82,7 @@ return {
           },
         },
         vtsls = {},
-        jdtls = {},
+        -- jdtls = {},
         pyright = {
           settings = {
             python = {
