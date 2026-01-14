@@ -10,7 +10,7 @@ return {
     "nvim-java/nvim-java",
     config = function()
       require("java").setup()
-      vim.lsp.enable("jdtls")
+      -- vim.lsp.enable("jdtls")
     end,
   },
 
@@ -82,7 +82,7 @@ return {
           },
         },
         vtsls = {},
-        -- jdtls = {},
+        jdtls = {},
         pyright = {
           settings = {
             python = {

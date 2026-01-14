@@ -9,9 +9,9 @@ return {
     },
   },
   {
-    "nvim-treesitter/nvim-treesitter",
+    "folke/snacks.nvim",
     opts = {
-      auto_install = true,
+      explorer = { enabled = false },
     },
   },
 }
